@@ -35,7 +35,7 @@ module.exports = function(grunt) {
     },
     watch: {
       files: [ 'scss/*.scss' ],
-      tasks: [ 'compass:prod', 'lint' ]
+      tasks: [ 'compass:prod' ]
     },
     compass: {
       prod: {
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
   //npm tasks
   grunt.loadNpmTasks( 'grunt-compass' );
   
-  grunt.registerTask('serve', 'compass:prod lint server watch');
+  grunt.registerTask('serve', 'compass:prod server watch');
   
 
 };

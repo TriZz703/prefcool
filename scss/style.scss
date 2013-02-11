@@ -1,5 +1,6 @@
 @import "compass";
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import "flexslider.scss";
 
 /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
@@ -43,7 +44,7 @@ nav{
 	}
 }
 
-#tagline{
+.tagline{
 	h3{
 		font-size: 30px;
 	}
@@ -51,15 +52,15 @@ nav{
 		font-size: 48px;
 		font-family: 'Montserrat', sans-serif;
 		margin:50px 20px 0 0;
-		background-color:#007dc1;
-		border:1px solid #124d77;
+/* 		background-color:#007dc1; */
+/* 		border:1px solid #124d77; */
 		display:inline-block;
 		color:#ffffff;
 		padding:15px 30px;
-		@include box-shadow(inset 0px 1px 0px 0px #54a3f7);
-		@include background-image(radial-gradient(left top, ellipse cover, #007dc1, #0061a7));
-		@include border-radius(50px);
-		@include text-shadow(0px 1px 0px #154682);
+/* 		@include box-shadow(inset 0px 1px 0px 0px #54a3f7); */
+/* 		@include background-image(radial-gradient(left top, ellipse cover, #007dc1, #0061a7)); */
+/* 		@include border-radius(50px); */
+/* 		@include text-shadow(0px 1px 0px #154682); */
 	}
 }
 
@@ -88,6 +89,20 @@ nav{
 	}
 }
 
+.button{
+	cursor: pointer;
+	@include box-shadow(
+		0 1px 3px rgba(0,0,0,.75),
+		inset 0 1px 0 rgba(255,255,255,.2),
+		inset 0 0 3px rgba(255,255,255,.2),
+		0 0 0 1px rgba(7,77,121,.7)
+	);
+	@include background-image(linear-gradient(top, #00adfc, #005db7));
+	@include border-radius(60px);
+	@include text-shadow(0 2px 2px rgba(0,0,0,0.75));
+}
+
+#about-us-header,
 #header{
 	padding:80px 0 0;
 	height:500px;
@@ -95,10 +110,108 @@ nav{
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
 	@include filter-gradient(#092e4f, #08031a, horizontal);
-	@include background-image(radial-gradient(center, ellipse cover,  #092e4f, #08031a));
+	@include background-image(radial-gradient(center, #092e4f, #08031a));
 }
 
+#about-us-header{
+	line-height: 1.5;
+	font-weight: normal;
+	font-size:18px;
+	text-align: justify;
+	color:#c3c3c3;
+	padding:40px 0 60px;
+	height:auto;
+	
+	.tagline{
+		text-align: center;
+		color:#fff;
+	}
+	p{
+		margin-bottom: 20px
+	}
+	h2{
+		font-size:32px;
+		color:#fff;
+		margin:0 0 20px 0;
+	}
+	h3{
+		margin: 20px 0 30px;
+	}
+	h4{
+		margin:0;
+		font-weight: bold;
+		line-height: 1;
+	}
+}
 
+section{
+	margin-bottom: 5px;
+	position: relative;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.content{
+	background:#fff;
+	color:#5e5e5e;
+	line-height:1.5;
+	h2{
+		padding-top: 30px;
+		padding-bottom: 10px;
+		font-size: 30px;
+		color: #565656;
+		text-shadow: 0 1px 1px #fff;
+		text-align: center;
+	}
+	.feature{
+		font-weight: normal;
+		width: 390px;
+		display: inline-block;
+		text-align: left;
+		margin: 30px;
+		text-align:justify;
+		vertical-align: top;
+	}
+}
+
+.brands{
+	padding-bottom:40px;
+}
+
+.flexslider_container{
+	width:800px;
+	margin: 0 auto;
+	text-align: center;
+	
+	.media-slide p{
+		padding:0 40px;
+		font-style: italic;
+		font-weight: normal;
+		
+		&.reviewer{
+			text-align: right;
+			padding: 10px 50px;
+		}
+	}
+	
+}
+
+.flex-control-paging li a {
+	width: 11px;
+	height: 11px;
+	display: block;
+	background: #666;
+	background: rgba(0,0,0,0.2);
+	cursor: pointer;
+	text-indent: -9999px;
+	@include border-radius(20px);
+	@include box-shadow(inset 0 0 3px rgba(0,0,0,0.3));
+	
+	&.flex-active {
+		background: #000;
+		background: rgba(0,0,0,0.5);
+		cursor: default;
+	}
+}
 
 /*
 @media screen and (min-width: 320px) {

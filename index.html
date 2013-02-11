@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title></title>
-<!-- 	<script src="http://code.jquery.com/jquery.min.js"></script> -->
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="./src/jquery.flexslider.js"></script>
 	<link href="./css/style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
@@ -25,16 +26,103 @@
 			<h1>Preferred</h1>
 			<h2>Heating &amp Cooling</h2>
 		</div>
-		<div id="tagline">
-			<h3 id="slogan">Caring for Our Customers the Preferred Way!</h3>
-			<h4 id="phone-number">(703) 620-1111</h4>
+		<div class="tagline">
+			<h3 class="slogan">Caring for Our Customers the Preferred Way!</h3>
+			<h4 class="phone-number button">(703) 620-1111</h4>
 		</div>
 	</div>
 </section>
 
-<div id="content">
-	<div class="container"></div>
+<div class="content">
+	<div class="container">
+	
+		<section>
+			<h2>Serving the Entire Northern Virginia Area</h2>
+			<div class="feature">Our job is to keep your home comfortable for you and your family whether we're in the cold days of winter or the scorching hot months of Virginia's summer!</div>
+			<div class="feature">Whether we are servicing your current heating or cooling system or installing a new system, we pride ourselves in offering you the most efficient heating and cooling products available in the marketplace today.</div>
+			<div class="feature">We provide peace of mind with our Preferred Maintenance Service Plans that are designed to reduced energy costs, extended equipment lifespan and help prevent costly breakdowns.</div>
+			<div class="feature">Ensuring your equipment operates safely is our Preferred Heating & Cooling guarantee.</div>
+		</section>
+		
+		<section>
+			<h2>We carry the top name brands.</h2>
+			<div class="brands">
+				<img src="/images/carrier-logo.png" width="300"/>
+				<img src="/images/trane-logo.png" width="300"/>
+				<img src="/images/luxaire-logo.png" width="300"/>
+			</div>
+		</section>
+		
+		<section>
+			<h2>Here is what our customers say about us!</h2>
+				<div class="flexslider_container">
+					<div class="flexslider">
+						<ul class="slides">
+							<li class="media-slide">
+								<p>"They were prompt, which is always appreciated, percise with their repair, and explained our situation on a level that I could understand. Overall a great experience."</p>
+								<p class="reviewer">- Amber M. in Arlington, VA</p>
+							</li>
+							<li class="media-slide">
+								<p>"Had a great experience with Preferred Heating & Cooling. Will be using them again. Very professional and understanding staff."</p>
+								<p class="reviewer">- Dzejna M. in Leesburg, VA</p>
+							</li>
+							<li class="media-slide">
+								<p>"If you want an honest company to fix your heating system, these are the guys to call. They took the time to explain the repairs to me and stand behind their work. I will definitely use them again."</p>
+								<p class="reviewer">- Rich K. in Woodbridge, VA</p>
+							</li>
+							<li class="media-slide">
+								<p>"Very good job."</p>
+								<p class="reviewer">- Eufracio A. in Alexandria, VA</p>
+							</li>
+							<li class="media-slide">
+								<p>"I definitely recommend based on today's experience!"</p>
+								<p class="reviewer">- H l F. in Warrenton, VA</p>
+							</li>
+							<li class="media-slide">
+								<p>"Great professional service. Easy to contact, knowledgeable staff. On time for the appointment."</p>
+								<p class="reviewer">- Mario B. in Reston, VA</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			
+	</div>
 </div>
+
+<section id="about-us">
+	<div id="about-us-header">
+		<div class="container">
+			<h2>More About Us</h2>
+			<p>Finding the right Company can make all the difference in your overall service experience!  At Preferred Heating & Cooling we recognize that and therefore do our best everyday to exceed our customer's expectation by providing a level of service that far exceeds their expectations. Preferred Heating & Cooling operates with a strong sense of integrity and an unwavering conviction for being honest and fair throughout the entire process! We are committed to offering our customers the very best in today's energy-efficient product brands, unparalleled maintenance service contracts and all those little extras that say, "we go that extra mile for you!"  Extras like, priority service for our Preferred Customers, 24 hour emergency service, exclusive discounts on energy-efficient equipment and guaranteed set pricing for extended annual service agreements, just to name a few.</p>
+			<p>Our expertise, coupled with the latest technology tools available today, enables us to provide the level of service that today's homeowners expect and deserve!  We know you have choices when it comes to choosing a heating and cooling company.  Our goal - to confirm you made the right choice!  Whether you need an equipment tune-up, a part installed, new systems installed or are purchasing an annual service contract, Preferred Heating & Cooling is prepared to provide you with superior service every step of the way.</p>
+			<p>We know the heating and cooling business - let us put our expertise to work for you!</p>
+			<div class="tagline">
+				<h3 class="slogan">Caring for Our Customers the Preferred Way!</h3>
+				<h4 class="phone-number button">(703) 620-1111</h4>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="content">
+	<div class="container">
+	
+		<section>
+			<h2>We Put Your Service Guarantee in Writing!</h2>
+		</section>
+	
+	</div>
+</div>
+
+<script>
+	$(".flexslider").flexslider({
+		animation: "slide",
+		pauseOnHover: !0,
+		controlNav: !0,
+		keyboard: !1
+	});
+</script>
 
 </body>
 </html>
