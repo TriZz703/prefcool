@@ -148,8 +148,8 @@
 		
 		<section>
 			<h2>Products and Accessories</h2>
-			<div class="product">
-				<h3>Furnaces</h3>
+			<h3 class="product-header">Furnaces</h3>
+			<div class="product active">
 				<p>Furnace design has advanced in recent years to be far safer and more efficient than older designs. This is the result of improvements in the burner, the ignition, and the blower motor. Furnace heating efficiency is measured by an Annual Fuel Utilization Efficiency (AFUE) percentage. A higher AFUE percentage indicates a more efficient furnace.</p>
 				<p>The basic components of a furnace system are:</p>
 				<ul>
@@ -161,8 +161,8 @@
 					<li>A flue or vent pipe to exhaust by-products of combustion (such as water vapor and carbon dioxide) outside. High-efficiency furnaces use special, corrosion-resistant vent-pipe materials.</li>
 				</ul>
 			</div>
+			<h3 class="product-header">Air Conditioners</h3>
 			<div class="product">
-				<h3>Air Conditioners</h3>
 				<p>A "split system" central air conditioner includes a compressor, fan, condenser coil, evaporator coil and refrigerant. The system removes heat from indoor air and transfers it outside, allowing the indoor air to be circulated and cooled (which is measured by SEER, Seasonal Energy Efficiency Ratio). A central air conditioning system uses electricity as its power source.</p>
 				<p>The basic components of an air conditioning system are:</p>
 				<ul>
@@ -171,8 +171,8 @@
 					<li>Ductwork to transfer the cooled air throughout the home</li>
 				</ul>
 			</div>
+			<h3 class="product-header">Heat Pumps</h3>
 			<div class="product">
-				<h3>Heat Pumps</h3>
 				<p>A "split system" heat pump is like a central air conditioner, which includes an outdoor compressor, fan, outdoor coil, indoor coil, and a refrigerant. The system reverses the cycle used during summer cooling (which is measured by using SEER, Seasonal Energy Efficiency Ratio) and to provide winter heating (measured by using HSPF, Heating Season Performance Factor). A heat pump uses electricity as its power source.</p>
 				<p>The basic components of a heat pump are:</p>
 				<ul>
@@ -181,20 +181,20 @@
 					<li>Ductwork to transfer the heated or cooled air throughout the home.</li>
 				</ul>
 			</div>
+			<h3 class="product-header">Air Handlers</h3>
 			<div class="product">
-				<h3>Air Handlers</h3>
 				<p>The air handler is the indoor component of a split heat pump system or a split A/C system.  The inside of an air handler consists of an evaporator coil, blower motor and if used in a heat pump system it also contains a back up heating element. The evaporator coil transfers heat or cooling energy into the home as the blower circulated air through the unit and into your homes duct system. When replacing your air handler look for units equipped with variable speed blowers, they're quieter and more efficient then standard blowers. All the parts within a split system whether a heat pump or A/C system are designed to work together so it's important that they be properly matched so you enjoy maximum efficiency, total comfort, and extended system life.</p>
 			</div>
+			<h3 class="product-header">Thermostats and Comfort Controls</h3>
 			<div class="product accessory">
-				<h3>Thermostats and Comfort Controls</h3>
 				<p>Today's sophisticated comfort controls not only control your home's temperature but can also control a home humidifier, air cleaners, and ventilation. If your home's ductwork allows we can even add multiple zones  with just one furnace. Preferred Heating and Cooling carries a full line of HVAC controls for your home.</p>
 			</div>
+			<h3 class="product-header">Humidifiers</h3>
 			<div class="product accessory">
-				<h3>Humidifiers</h3>
 				<p>The two most common types of whole house humidifiers are "flow through" humidifiers or "Steam" humidifiers.  Flow through humidifiers normally have a pad inside the unit. Warm water is trickled over the pad as warm air is blown through the pad. Some of the water evaporates into the air stream and the rest goes down the drain. The benefits to this type of humidifier are that it can be installed in most applications, is relatively inexpensive and is easy to maintain. The drawback to a flow through humidifier is that the amount of moisture they can add to a home is limited since they rely on the furnace operating.  Steam humidifiers operate by heating a reservoir of water and sending steam into the air stream.  These humidifiers work independently of the furnace and can produce moisture as it's needed. Steam humidifiers also have much larger capacities and can handle much larger homes. The drawbacks of a steam humidifier are the initial cost and the challenge of running an electrical circuit from the homes electrical panel to the furnace. Maintenance can be more challenging and often requires professional help. </p>
 			</div>
+			<h3 class="product-header">Air Purification Systems</h3>
 			<div class="product accessory">
-				<h3>Air Purification Systems</h3>
 				<p>When looking to purify the air in our homes it is often a three step approach; we need to remove particulates, kill or sterilize microbes and then remove odors. In order to accomplish this we need an air filter that removes particulates, has some type of UV that sterilizes microbes such as mold and bacteria, and oxidizers that remove odors. Preferred Heating & Cooling carries a full line of products that accomplish all three. We can install a basic media air filter to help reduce dust or a state-of-the-art air purification system.</p>
 			</div>
 		</section>
@@ -247,12 +247,31 @@
 </section>
 
 <script>
-	$(".flexslider").flexslider({
+
+	$('.flexslider').flexslider({
 		animation: "slide",
 		pauseOnHover: !0,
 		controlNav: !0,
 		keyboard: !1
 	});
+	
+	var $products = $('.product');
+	
+	$('.product-header').on('click', function () {
+		$products.animate({
+			height:0
+		}).removeClass('active');
+		$(this).next().addClass('active').stop().animate({
+			height:465
+		});
+	});
+	
+	$products.css({
+		height:0
+	}).filter('.active').css({
+		height:465
+	});
+	
 </script>
 
 </body>
