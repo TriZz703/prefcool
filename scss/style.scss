@@ -103,6 +103,7 @@ nav{
 }
 
 #about-us-header,
+#specials-header,
 #header{
 	padding:80px 0 0;
 	height:500px;
@@ -113,6 +114,7 @@ nav{
 	@include background-image(radial-gradient(center, #092e4f, #08031a));
 }
 
+#specials-header,
 #about-us-header{
 	line-height: 1.5;
 	font-weight: normal;
@@ -175,6 +177,7 @@ section{
 
 .brands{
 	padding-bottom:40px;
+	padding-top:20px;
 }
 
 .flexslider_container{
@@ -211,6 +214,119 @@ section{
 		background: rgba(0,0,0,0.5);
 		cursor: default;
 	}
+}
+
+.plans{
+	text-align: center;
+	
+	h2{
+		margin-bottom: 15px;
+	}
+	
+	.full{
+		text-align: justify;
+		font-weight: normal;
+		font-size:16px;
+		padding:0 40px 10px;
+	}
+	
+	p{
+		font-weight: bold;
+		font-size: 18px;
+		margin:0 0 10px;
+	}
+	
+	ul{
+		margin:0 0 0 20px;	
+	}
+	
+	li{
+		list-style: disc;
+		margin-bottom:10px;
+		line-height: 1.2
+	}
+	
+	.feature{
+		text-align: left;
+		margin:10px;
+		padding:20px;
+		background:#efefef;
+		color:#333;
+		height:270px;
+		@include border-radius(10px);
+		
+		&.all{
+			height:150px;
+			margin-bottom: 40px;
+			width: 846px;
+		}
+	}
+}
+
+.product{
+	margin:20px 0;
+	h3{
+		font-size:18px;
+		background: #092e4f;
+		padding:8px 12px;
+		color:#fff;
+		margin-bottom:10px;
+	}
+	p{
+		font-size:16px;
+		font-weight:normal;
+		padding: 20px;
+	}
+	ul{
+		margin:0 40px;
+		padding:20px 20px 20px 40px;
+		background:#efefef;
+		color:#333;
+		font-weight:normal;
+		@include border-radius(10px);
+
+	}
+	li{
+		list-style: disc;
+		color:#333;
+		
+	}
+}
+
+.coupons{
+	text-align: center;
+}
+.coupon{
+	width:200px;
+	height:200px;
+	text-align: center;
+	padding:8px;
+	margin:10px;
+	float:left;
+	color:#fff;
+	font-size:20px;
+	cursor:pointer;
+	margin-bottom:30px;
+	@include box-shadow(0 0 2px 1px rgba(0,0,0,.5));
+	@include text-shadow(0 2px 2px rgba(0,0,0,0.75));
+	@include background-image(linear-gradient(top,  #a90329, #6d0019));
+	@include inline-block;
+}
+
+.coupon-outer[class]{
+	display:table;
+}
+.coupon-middle{
+	position: absolute; top: 50%;
+}
+.coupon-middle[class]{
+	display: table-cell; vertical-align: middle; width: 100%; position: static;
+}
+.coupon-inner{
+	position: relative; top: -50%;
+}
+.coupon-inner[class]{
+	position: static;
 }
 
 /*
