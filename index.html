@@ -2,24 +2,23 @@
 <html>
 <head>
 	<title></title>
-	<script src="http://code.jquery.com/jquery.min.js"></script>
-	<script src="./src/jquery.flexslider.js"></script>
 	<link href="./css/style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 
 <div id="panel">
 	<div class="container">
-		<nav>
-			<a href="/" class="active">Home</a>
-			<a href="/about-us" class="no-phone">About Us</a>
-			<a href="/plans-and-services" class="no-phone">Plans & Services</a>
-			<a href="/specials">Specials</a>
-			<a href="/contact-us">Contact Us</a>
-		</nav>
+		<ul class="nav">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#about-us" class="no-phone">About Us</a></li>
+			<li><a href="#plans-and-services" class="no-phone">Plans &amp; Services</a></li>
+			<li><a href="#specials">Specials</a></li>
+			<li><a href="#contact-us">Contact Us</a></li>
+		</ul>
 	</div>
 </div>
 
+<a id="home" class="scroll-point"></a>
 <section id="header">
 	<div class="container">
 		<div id="logo">
@@ -35,7 +34,6 @@
 
 <div class="content">
 	<div class="container">
-	
 		<section>
 			<h2>Serving the Entire Northern Virginia Area</h2>
 			<div class="feature">Our job is to keep your home comfortable for you and your family whether we're in the cold days of winter or the scorching hot months of Virginia's summer!</div>
@@ -90,7 +88,8 @@
 	</div>
 </div>
 
-<section id="about-us">
+<a id="about-us" class="scroll-point"></a>
+<section>
 	<div id="about-us-header">
 		<div class="container">
 			<h2>More About Us</h2>
@@ -105,9 +104,9 @@
 	</div>
 </section>
 
+<a id="plans-and-services" class="scroll-point"></a>
 <div class="content">
 	<div class="container">
-	
 		<section class="plans">
 			<h2>We Put Your Service Guarantee in Writing!</h2>
 			<p class="full">Keep your heating and cooling systems working at peak performance with Preferred Heating and Cooling's Preferred Maintenance Service Plans.  With a Preferred Maintenance Service Plans, you will benefit from reduced energy costs, extended equipment lifespan and reduced costly breakdowns.  Simply put, managing your heating and cooling equipment with a Preferred Maintenance Service Plan is the best way to avoid inconvenient and costly equipment issues. Click on the link to the left for a detailed list of what our Preferred Maintenance Service Plans include.  Please take a moment to review the items and then let us take the worry out of home heating and cooling for you!</p>
@@ -202,7 +201,8 @@
 	</div>
 </div>
 
-<section id="specials">
+<a id="specials" class="scroll-point"></a>
+<section>
 	<div id="specials-header">
 		<div class="container">
 			<h2>Special Offers</h2>
@@ -246,6 +246,17 @@
 	</div>
 </section>
 
+<a id="contact-us" class="scroll-point"></a>
+<section>
+	<div id="specials-header">
+		<div class="container">
+		</div>
+	</div>
+</section>
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="./src/jquery.flexslider.js"></script>
+<script src="./src/jquery.scrollspy.js"></script>
 <script>
 
 	$('.flexslider').flexslider({
@@ -272,6 +283,10 @@
 		height:465
 	});
 	
+	$('body').scrollspy({
+		target:'#panel'
+	});
+
 </script>
 
 </body>
