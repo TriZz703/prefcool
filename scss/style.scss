@@ -347,13 +347,27 @@ section{
 	display: block;
 }
 
-fieldset{
-	width:320px;
-	margin: 0 auto;
-}
-
 #contactForm{
 	margin-top:20px;
+}
+
+form{
+	line-height:1.4em;
+	float:left;
+	max-width:320px;
+}
+
+fieldset{
+	padding:5px,0,0,0;
+}
+
+label{
+	margin:20px 20px 0 0;
+}
+
+input{
+	float:right;
+	@include border-radius(7px);
 }
 
 /*
